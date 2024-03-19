@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sum Of The Digits </title>
+</head>
+
+<body>
+  <input type="text" id="jsinput">
+  <input type="text" id="jsinput1">
+  <button onclick="fire()">Sum</button>
+  <div id="demo">
+
+  </div>
+  <script>
+    function fire() {
+      let x = parseInt(document.getElementById('jsinput').value);
+      let y = parseInt(document.getElementById('jsinput1').value);
+      let sum ;
+      sum = x + y;
+      console.log(sum);
+      document.getElementById('demo').innerHTML = `<p>${sum}</p>`;
+      document.getElementById('jsinput').value = '';
+      document.getElementById('jsinput1').value = '';
+    }
+  </script>
+</body>
+
+</html>

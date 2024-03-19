@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome</title>
+</head>
+
+<body>
+  <h1>To find the entered number is a Palindrome or not</h1>
+  <label>Enter the Number : = </label><br>
+  <input type="text" id="jsinput">
+  <br>
+  <button onclick="fire()">Submit</button>
+  <div id="demo">
+
+  </div>
+  <script>
+    function fire() {
+      let x = parseInt(document.getElementById('jsinput').value);
+      if (isNaN(x)) {
+        alert("please enter the number.");
+        return;
+      }
+      else {
+        let og = x;
+        let value = 0;
+        while (x > 0) {
+          let rem = x % 10;
+          value = value * 10 + rem;
+          x = parseInt(x / 10);
+        }
+        if (og === value) {
+          let y = `<p>so the entered number ${og} is a palindrome</p>`;
+          document.getElementById('demo').innerHTML = y;
+          document.getElementById('jsinput').value = '';
+        }
+        else {
+          let y = `<p>so the entered number ${og} is not a palindrome</p>`;
+          document.getElementById('demo').innerHTML = y;
+          document.getElementById('jsinput').value = '';
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

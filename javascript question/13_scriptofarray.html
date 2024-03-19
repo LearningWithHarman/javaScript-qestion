@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CREATE THE ARAY</title>
+  <style>
+    ul{
+font-family: 'Courier New', Courier, monospace;
+font-size: 20px;
+font-weight: bolder;
+
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+  <script>
+    let arr=["Apple"," Orange","Mango","Banana","Strawberry","Pineapple","Watermelon"," Grape","Kiwi","Peach"]
+    let x= '';
+
+  for(let i=0;i<arr.length;i++){
+    let num = arr[i];
+  x +=`
+    <li>${num}</li>
+    `;
+  }
+     document.getElementById('demo').innerHTML = `<ul>${x}</ul>`;
+  </script>
+</body>
+</html>

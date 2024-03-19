@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+</head>
+<body>
+  <form id="registrationForm" onsubmit="return validateForm()">
+
+    <h1>Registration Form</h1>
+    <label for="fullName">FullName: </label><br>
+    <input type="text" id="fullName"><br>
+    
+    <label for="email">Email Address: </label><br>
+    <input type="text" id="email"><br>
+    
+    <label for="phone">Phone (enter only 10 digits): </label><br>
+    <input type="text" id="phone"><br>
+    
+    <label for="password">Password: </label><br>
+    <input type="password" id="password"><br>
+    
+    <label for="confirmPassword">Confirm Password: </label><br>
+    <input type="password" id="confirmPassword"><br>
+    
+    
+  
+  </form>
+  <button type="submit" onclick="validateForm()">Register</button>
+<div id="demo"></div>
+  <script>
+    function validateForm() {
+      let fullName = document.getElementById("fullName").value;
+      let email = document.getElementById("email").value;
+      let phone = document.getElementById("phone").value;
+      let password = document.getElementById("password").value;
+      let confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (fullName === "" || email === "" || phone === "" || password === "" || confirmPassword === "") {
+        alert("Please fill in all fields.");
+        return false; 
+      }
+
+      if (phone.length !== 10 || isNaN(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return false; 
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+ 
+    let x = '';
+    x =`<p>FullName: = ${fullName}</p>
+    <p>Email Address : = ${email}</p>
+    <p>Phone : = ${phone}</p>
+    <p>Password : = ${password}</p>
+    <p>Confirm Password : = ${confirmPassword}</p>`;
+    document.getElementById('demo').innerHTML = x;
+    }
+  </script>
+</body>
+</html>

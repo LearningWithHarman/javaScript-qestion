@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>showing days</title>
+</head>
+
+<body>
+  <input type="text" id="jsinput">
+  <button onclick="fire()">Submit</button>
+
+  <div id="demo">
+  </div>
+
+
+  <script>
+
+    function fire() {
+      let input = parseInt(document.getElementById('jsinput').value);
+      let js = '';
+
+      if (input > 7 || input < 1) {
+alert ("enter the number between 1 to 7 only.");
+
+     document.getElementById('jsinput').value = "";
+
+     return ;
+      }
+      else {
+        switch (input) {
+          case 1:
+
+            js = `<p>monday</p>`;
+            break;
+
+          case 2:
+
+            js = `<p>Tuesday</p>`;
+            break;
+
+
+          case 3:
+
+            js = `<p>Wednesday</p>`;
+            break;
+
+
+          case 4:
+
+            js = `<p>Thursday</p>`;
+            break;
+
+
+          case 5:
+
+            js = `<p>Friday</p>`;
+            break;
+
+
+          case 6:
+
+            js = `<p>Saturday</p>`;
+            break;
+
+
+          case 7:
+
+            js = `<p>Sunday</p>`;
+            break;
+        }
+        document.getElementById('demo').innerHTML = js;
+        document.getElementById('jsinput').value = "";
+      }
+
+    }
+  </script>
+</body>
+
+</html>

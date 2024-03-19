@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>convert feet into cm</title>
+</head>
+
+<body>
+  <h1>convert feet into cm</h1>
+  <input type="text" id="jsinput"><br><br>
+  <button onclick="fire()">Convert feet into Cm</button>
+  <div id="demo"></div>
+  <script>
+    function fire() {
+
+      let x = parseInt(document.getElementById('jsinput').value);
+      x = x * 30.48;
+      document.getElementById('demo').innerHTML = x;
+      document.getElementById('jsinput').value = '';
+    }
+  </script>
+</body>
+
+</html>

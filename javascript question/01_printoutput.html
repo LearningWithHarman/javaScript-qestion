@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Print</title>
+</head>
+
+<body>
+  <button onclick="fire()">Print series from 1 to 10 </button>
+  <button onclick="fire1()">Reverse of the series </button>
+
+  <button onclick="printSquarePattern()">printSquarePattern</button>
+  <button onclick="printRightTrianglePattern()">printRightTrianglePattern</button>
+  <div id="demo"></div>
+  <script>
+    function fire() {
+      let text = '';
+      for (let i = 1; i <= 10; i++) {
+        text += `<p>${i}</p>`;
+      }
+      document.getElementById('demo').innerHTML = text;
+    }
+
+    function fire1() {
+      let text = '';
+      let i = 10;
+      while (i >= 1) {
+        text += `<p>${i}</p>`;
+        i--;
+      }
+      document.getElementById('demo').innerHTML = text;
+    }
+
+    function printSquarePattern() {
+      let row = '';
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+          row += '* ';
+        }
+        row += '<br>';
+      }
+      document.getElementById('demo').innerHTML = row;
+    }
+
+    function printRightTrianglePattern() {
+      let row = '';
+      for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+          row += '* ';
+        }
+        row += '<br>';
+      }
+      document.getElementById('demo').innerHTML = row;
+    }
+
+  </script>
+</body>
+
+</html>

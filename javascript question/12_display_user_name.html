@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display user name</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <label id="jsinput2">enter your name : = </label><br>
+  <input type="text" id="jsinput"><br>
+  <button onclick="fire()" id="jsinput1">Submit</button>
+  <div id="demo">
+
+  </div>
+
+
+  <script>
+    function fire() {
+      let x = document.getElementById('jsinput').value;
+      let y = '';
+      y = `  <h1>Welcome!</h1>
+
+<h2>Dear [${x}],</h2>
+
+<p>We are thrilled to welcome you to Acme Community Hub! Whether you're here to connect with fellow enthusiasts, learn new skills, or explore exciting projects, we're delighted to have you as part of our community.</p>
+
+<p>At Acme Community Hub, we strive to foster a vibrant and supportive environment where members can share their passions and collaborate on creative endeavors. Our goal is to empower individuals to pursue their interests and make meaningful connections along the way.</p>
+
+<p>We believe that every individual brings unique perspectives, experiences, and talents to our community, and we encourage you to explore, engage, and contribute in whatever way feels meaningful to you.</p>
+
+<p>If you ever have any questions, feedback, or ideas, please don't hesitate to reach out to us. We're here to support you on your journey and make your experience with us as enjoyable and fulfilling as possible.</p>
+
+<p>Once again, welcome aboard! We're excited to embark on this journey together.</p>
+
+<h2>Warm regards,</h2>
+<h2>The Acme Community Hub Team</h2>`;
+document.getElementById('demo').innerHTML = y;
+      document.getElementById('jsinput').style.display = 'none';
+      document.getElementById('jsinput1').style.display = 'none';
+      document.getElementById('jsinput2').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

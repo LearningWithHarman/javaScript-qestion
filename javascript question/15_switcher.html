@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switcher</title>
+  <style>
+    .image {
+      background-color: rgba(0, 0, 0, 0);
+      height: 50px;
+      text-align: center;
+    }
+
+    #container {
+      text-align: center;
+      background-color: rgba(157, 152, 152, 0.855);
+      padding: 30px 80px;
+    }
+
+    .image1 {
+      height: 20px;
+      padding: 0px 9px;
+    }
+
+    .images {
+
+      height: 400px;
+      width: 400px;
+      padding: 60px 0px;
+      border-radius: 23px;
+    }
+
+    #container1 {
+      display: flex;
+      justify-content: space-around;
+      background-color: bisque;
+    }
+
+    .ok {
+      padding: 80px 0px;
+    }
+
+    p {
+      font-size: 17px;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bolder;
+    }
+
+    h1 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 53px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1><img
+        src="./1166926641802eym8apvbcfa5w3scpajlggbjia8lsyupksoc5ixweyh72u1rhrtlaym9nkeauxkebegtbj431nemwupzzmb5rngj9alszv8k3j.png"
+        class="image">Theme Switcher</h1>
+    <br>
+    <img src="./png-transparent-circle-white-circle-white-monochrome-black-thumbnail.png" class="image1"
+      onclick="white()">
+    <img src="./Pan_Blue_Circle.png" class="image1" onclick="blue()">
+    <img src="./download (1).png" class="image1" onclick="grey()">
+
+  </div>
+
+  <div id="container1">
+    <img src="./1800.jpeg" class="images">
+    <div class="ok">
+      <h1>A Sweet Heading</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,<br> fugiat voluptate, architecto perferendis
+        cum sit id iste reiciendis molestiae iure asperiores,<br> voluptates magnam totam omnis. Harum odit quasi
+        quisquam amet.lore</p>
+    </div>
+  </div>
+
+  <script>
+    function white() {
+      document.getElementById('container').style.backgroundColor = 'white';
+      document.getElementById('container1').style.backgroundColor = 'white';
+    }
+    function blue() {
+      document.getElementById('container').style.backgroundColor = 'blue';
+      document.getElementById('container1').style.backgroundColor = 'blue';
+    }
+    function grey() {
+      document.getElementById('container').style.backgroundColor = 'grey';
+      document.getElementById('container1').style.backgroundColor = 'grey';
+    }
+  </script>
+</body>
+
+</html>

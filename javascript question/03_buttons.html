@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>buttons</title>
+  <style>
+    .container {
+      border: 1px solid black;
+      text-align: center;
+      height: 99px;
+      overflow:auto;
+    }
+
+    button {
+      margin-top: 12px;
+      padding: 12px 12px;
+      margin-right: 42px;
+    }
+
+    #ok {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bolder;
+      font-size: 17px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem inventore ab nesciunt veniam
+      illo quae ipsa dolore atque tenetur placeat provident quasi voluptatum praesentium aut similique dolorum error,
+      eos ipsam.</p>
+  </div>
+  <button onclick="fire1()">change style button</button>
+  <button onclick="fire2()">change content button</button>
+  <button onclick="fire3()">delete button</button>
+  <button onclick="fire4()">Add text button</button>
+  <button onclick="fire5()">reset</button>
+  <script>
+    function fire1() {
+      document.getElementById('demo').style.fontFamily = "'Courier New', Courier, monospace";
+      document.getElementById('demo').style.fontWeight = 'bolder';
+      document.getElementById('demo').style.fontSize = '17px';
+    }
+    function fire2() {
+      document.getElementById('demo').innerHTML = `<p>Content has been changed </p>`;
+    }
+    function fire3() {
+      document.getElementById('demo').innerHTML = "";
+    }
+    function fire4() {
+      document.getElementById('demo').innerHTML =
+        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem inventore ab nesciunt veniam
+      illo quae ipsa dolore atque tenetur placeat provident quasi voluptatum praesentium aut similique dolorum error,
+      eos ipsam.` +
+        "content added"
+        ;
+    }
+
+    function fire5() {
+      document.getElementById('demo').innerHTML =
+        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem inventore ab nesciunt veniam
+      illo quae ipsa dolore atque tenetur placeat provident quasi voluptatum praesentium aut similique dolorum error,
+      eos ipsam.`
+      document.getElementById('demo').style.fontFamily = 'none';
+      document.getElementById('demo').style.fontSize = '16px';
+      document.getElementById('demo').style.fontWeight = '100';
+    }
+  </script>
+</body>
+
+</html>

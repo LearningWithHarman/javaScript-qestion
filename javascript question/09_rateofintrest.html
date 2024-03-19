@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Of Intrest</title>
+</head>
+
+<body>
+  <form>
+    <label>enter the principal value : = </label>
+    <input type="text" id="jsinput">
+    <br>
+    <label>Rate Of Intrest : = </label>
+    <input type="text" id="jsinput1">
+    <br>
+    <label>Time : = </label>
+    <input type="text" id="jsinput2">
+  </form>
+  <button onclick="fire()">Submit</button>
+  <div id="demo"></div>
+  <script>
+function fire(){
+    let x = parseInt(document.getElementById('jsinput').value);
+    let y = parseInt(document.getElementById('jsinput1').value);
+    let z = parseInt(document.getElementById('jsinput2').value);
+
+    let simpleIntrest = (x * y * z) / 100;
+    let a = `<p>so the entered principal is: = ${x}<br>
+so the entered rate of intrest is : = ${y}<br>
+entered time : = ${z}<br>
+so the rate of interest is ${simpleIntrest}%
+</p>`;
+    document.getElementById('demo').innerHTML = a;
+}
+    </script>
+</body>
+
+</html>

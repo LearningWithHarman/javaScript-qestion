@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javascript</title>
+  <style>
+    /* #demo {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      flex-direction: column;
+    } */
+    .it{
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      flex-direction: column;
+
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Table App</h1>
+  <input type="text" id="jsinput" value="">
+  <button onclick="table()" class="js-button">Generate</button>
+  <div id="demo">
+
+  </div>
+
+  <script>
+
+
+
+    function table() {
+      let get = 0;
+      // let i= 1;
+      let getAlue = document.getElementById('jsinput');
+      let value = getAlue.value;
+      // value = parseFloat(value);
+
+      // document.getElementById('demo').innerHTML = "";
+      for (let i = 0; i <= 10; ++i) {
+
+        get = value * i;
+
+        document.getElementById('demo').innerHTML +=
+          `<p class= "it"> ${value} X ${i} = ${get}</p>`;
+
+
+      }
+
+
+
+    }
+  </script>
+</body>
+
+</html>

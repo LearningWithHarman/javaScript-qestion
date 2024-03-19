@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 23px;
+
+}
+
+.container li {
+  display: inline-block;
+  margin-right: 12px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+.container p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px;
+  color: white;
+}
+
+.info-nav {
+  text-align: center;
+  padding: 90px 0px;
+}
+
+.info-nav p {
+  padding: 34px 0px;
+}
+
+.info-nav button {
+  padding: 12px 12px;
+  border: none;
+  font-size: 13px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  border-radius: 3px;
+}
+
+.info-nav button:hover {
+  background-color: red;
+  color: white;
+}
+
+.parent {
+  position: relative;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(./bgbanner.jpg);
+  background-size: cover;
+}
+
+.parent {
+  color: rgb(0, 0, 0);
+}
+
+.info-nav {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+
+}
+
+.courses {
+  text-align: center;
+
+}
+.parent2{
+  padding: 80px 23px;
+}
+
+.info-courses {
+  display: flex;
+  text-align: center;
+  font-size: 12px;
+  gap: 23px;
+  justify-content: space-around;
+  padding: 20px 2px;
+}
+
+.first p {
+  font-size: 8px;
+
+}
+
+.second p {
+  font-size: 8px;
+}
+
+.third p {
+  font-size: 8px;
+}
+
+.first h4 {
+  font-size: 23px;
+
+}
+
+.second h4 {
+  font-size: 23px;
+}
+
+.third h4 {
+  font-size: 23px;
+}

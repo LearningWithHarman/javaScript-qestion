@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>odd even for div</title>
+  <style>
+    .container {
+      display: flex;
+    }
+
+    #div1,
+    #div2 {
+      /* border:1px solid blueviolet; */
+      margin: 12px 12px;
+      width: 50%;
+      height: 100vh;
+    }
+
+    h6 {
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      text-decoration: underline;
+      padding: 0px 12px;
+    }
+
+    .cont {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cont">
+    <input type="text" id="js-input">
+    <button id="button" onclick="fire()">DONE</button>
+  </div>
+
+  <div class="container">
+    <div id="div1">
+    </div>
+    <div id="div2">
+    </div>
+  </div>
+
+  <script>
+    function fire() {
+      let input = (document.getElementById('js-input').value);
+      let evenNumbers = '';
+      let oddNumbers = '';
+      // input === '' || isNaN(input)
+      if (input === '' || isNaN(input)) {
+        alert("Please enter the number");
+        return 0;
+      }
+      for (let i = 0; i <= input; i++) {
+
+
+        if (i % 2 == 0) {
+
+          evenNumbers += <p>${i}</p>;
+        } else {
+          oddNumbers += <p>${i}</p>;
+        }
+      }
+
+      document.getElementById('div1').innerHTML = "<h6>EVEN NUMBER</h6> <br> " + evenNumbers;
+      document.getElementById('div2').innerHTML =
+        "<h6>ODD NUMBER</h6> <br>" + oddNumbers;
+      document.getElementById('js-input').value = '';
+    }
+  </script>
+</body>
+
+</html>

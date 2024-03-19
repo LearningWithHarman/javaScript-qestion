@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Of The Students</title>
+</head>
+
+<body>
+  <h1>To Find The Grade Of the Students</h1>
+  <label>enter your percentage : = </label>
+  <input type="text" id="jsinput"><br>
+  <button onclick="fire()">Submit</button>
+  <div id="demo">
+
+  </div>
+  <script>
+
+    function fire() {
+      let x = parseInt(document.getElementById('jsinput').value);
+      let y = '';
+      if (isNaN(x)) {
+        alert("enter the valid grade.");
+        return;
+      }
+      else {
+        if (x > 90) {
+          y = `<p>so the grade is A</p>`;
+          document.getElementById('demo').innerHTML = y;
+          document.getElementById('jsinput').value = '';
+        }
+        else if (x < 90 && x > 80) {
+          y = `<p>so the grade is B</p>`;
+          document.getElementById('demo').innerHTML = y;
+          document.getElementById('jsinput').value = '';
+        }
+        else if (x < 80 && x > 70) {
+          y = `<p>so the grade is B</p>`;
+          document.getElementById('demo').innerHTML = y;
+          document.getElementById('jsinput').value = '';
+        }
+
+        else if (x < 70 && x > 60) {
+          y = `<p>so the grade is C</p>`;
+          document.getElementById('demo').innerHTML = y;
+          document.getElementById('jsinput').value = '';
+        }
+
+        else if (x < 60 && x > 50) {
+          y = `<p>so the grade is B</p>`;
+          document.getElementById('demo').innerHTML = y;
+          document.getElementById('jsinput').value = '';
+        }
+
+        else if (x < 50) {
+          y = `<p>You Are Fail</p>`;
+          document.getElementById('demo').innerHTML = y;
+          document.getElementById('jsinput').value = '';
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
